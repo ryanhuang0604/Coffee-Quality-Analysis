@@ -1,0 +1,6 @@
+data <- read.csv('arabica')
+lm1 = lm(Total.Cup.Points ~ Owner + Continent + Processing.Method + Color + Altitude + Harvest.Year, data=data)
+lm2 = lm(Total.Cup.Points ~ Continent + Color + Harvest.Year, data=data)
+state.lm1 = dyn$lm(Total.Cup.Points ~ Owner + Continent + Processing.Method + Color + Altitude + Harvest.Year, data=data)
+state.lm2 = dyn$lm(Total.Cup.Points ~ Continent + Color + Harvest.Year, data=data)
+anova(state.lm1, state.lm2)
